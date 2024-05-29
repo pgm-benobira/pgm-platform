@@ -1,0 +1,85 @@
+/*
+===========================
+GLOBAL STYLES
+===========================
+*/
+
+:root {
+    /* Visual design colors */
+    --dark: hsl(0, 0%, 13%);
+    --light: hsl(42, 63%, 97%);
+    --primary: hsl(21, 100%, 56%);
+    --secondary: hsl(28, 72%, 89%);
+    --secondary-dark: hsl(25, 24%, 18%);
+
+    /* Grayscale colors */
+    --grey: hsl(0, 0%, 93%);
+    --grey-dark: hsl(0, 0%, 24%);
+
+    /* Major colors */
+    --ifd: hsl(26, 76%, 59%); /* Interactive Front-end Development */
+    --cad: hsl(325, 66%, 45%); /* Cloud Application Development */
+
+    /* Program track colors */
+    --cgr: hsl(202, 62%, 56%); /* Business & Communication */
+    --ddw: hsl(103, 40%, 53%); /* Applied Information Technology */
+    --opr: hsl(26, 76%, 59%); /* Creative Design & Development */
+    --tdp: hsl(325, 66%, 45%); /* Computer Programming */
+    --idc: hsl(355, 70%, 52%); /* Workplace Learning */
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    color: var(--dark);
+}
+
+*::selection {
+    background-color: var(--primary);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 2rem;
+    background-color: var(--grey);
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3.75rem;
+    font-weight: normal;
+    line-height: 4.375rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: normal;
+    line-height: 2.625rem;
+}
+
+/* Highlighted text in orange */
+.focus {
+    color: var(--primary);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+.active {
+    color: var(--primary);
+}
