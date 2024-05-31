@@ -1,0 +1,22 @@
+.button {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    background-color: var(--primary);
+    color: var(--light);
+    border-radius: 2rem;
+    padding: 2rem;
+    transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--light);
+    color: var(--primary);
+    outline: 2px solid var(--primary);
+    transition: 0.2s ease-in-out;
+}
+
+.button--secondary {
+    background-color: var(--secondary);
+    color: var(--dark);
+}

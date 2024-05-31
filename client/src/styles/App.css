@@ -30,8 +30,8 @@ GLOBAL STYLES
 
 @font-face {
     font-family: 'Raleway';
-    src: url('../fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
-        url('../fonts/Raleway/Raleway-Regular.woff') format('woff');
+    src: url('../assets/fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Raleway/Raleway-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,6 +42,7 @@ GLOBAL STYLES
 
 *::selection {
     background-color: var(--primary);
+    color: var(--light);
 }
 
 body {
@@ -50,13 +51,14 @@ body {
     font-weight: normal;
     line-height: 2rem;
     background-color: var(--grey);
-    padding: 1rem;
+    padding: 2rem;
 }
 
 h1 {
     font-size: 3.75rem;
     font-weight: normal;
     line-height: 4.375rem;
+    padding: 2rem;
 }
 
 h2 {

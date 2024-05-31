@@ -1,5 +1,5 @@
-import './assets/styles/reset.css'
-import './assets/styles/App.css';
+import './styles/reset.css'
+import './styles/App.css';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements, } from "react-router-dom";
 import { ROUTES } from "./routes/routes";
 import Root from "./layouts/Root";
