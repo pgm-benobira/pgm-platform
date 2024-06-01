@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+
+const client = new ApolloClient({
+	uri: process.env.REACT_APP_HYGRAPH_CONTENT_API,
+	cache: new InMemoryCache(),
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>
+  <ApolloProvider client={client}>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </ApolloProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
