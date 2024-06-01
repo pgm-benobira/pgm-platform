@@ -36,10 +36,6 @@ GLOBAL STYLES
     font-style: normal;
 }
 
-* {
-    color: var(--dark);
-}
-
 *::selection {
     background-color: var(--primary);
     color: var(--light);
@@ -51,7 +47,13 @@ body {
     font-weight: normal;
     line-height: 2rem;
     background-color: var(--grey);
+    color: var(--dark);
     padding: 2rem;
+}
+
+body.dark-mode {
+    background-color: var(--grey-dark);
+    color: var(--light);
 }
 
 h1 {
@@ -79,9 +81,4 @@ ul {
 
 a {
     text-decoration: none;
-}
-
-a:hover,
-.active {
-    color: var(--primary);
 }

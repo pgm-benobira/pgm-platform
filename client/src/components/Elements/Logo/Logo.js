@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import GPLogo from '../../../assets/images/GP.svg'
+import GPLogoLight from '../../../assets/images/GP-light.svg'
 import { ROUTES } from '../../../routes/routes';
 
-import styles from './Logo.module.css'
+import './Logo.css';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../../contexts/ThemeContext';
 
 export default function Logo() {
+    const { darkMode } = useContext(ThemeContext);
   return (
-    <Link to={ROUTES.home.path} className={styles.logo__container}>
-      <div className={styles.logo}>
-        <img src={GPLogo} alt="Logo" className={styles.logo__image} />
-        <span className={styles.logo__text}>Graduaat Programmeren</span>
+    <Link to={ROUTES.home.path} className="logo__container">
+      <div className="logo">
+        <img src={darkMode ? GPLogoLight : GPLogo} alt="Logo" className="logo__image" />
+        <span className="logo__text">Graduaat Programmeren</span>
       </div>
     </Link>
   )

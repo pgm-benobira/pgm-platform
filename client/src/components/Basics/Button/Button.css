@@ -6,17 +6,25 @@
     color: var(--light);
     border-radius: 2rem;
     padding: 2rem;
-    transition: 0.2s ease-in-out;
 }
 
 .button:hover {
     background-color: var(--light);
     color: var(--primary);
     outline: 2px solid var(--primary);
-    transition: 0.2s ease-in-out;
+}
+
+.dark-mode .button:hover {
+    background-color: var(--dark);
+    color: var(--primary);
 }
 
 .button--secondary {
     background-color: var(--secondary);
     color: var(--dark);
+}
+
+.dark-mode .button--secondary {
+    background-color: var(--secondary-dark);
+    color: var(--light);
 }

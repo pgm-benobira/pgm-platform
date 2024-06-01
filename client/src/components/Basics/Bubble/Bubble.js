@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from './Bubble.module.css'
+import './Bubble.css'
 
 export default function Bubble({ children }) {
   return (
-    <div className={styles.bubble}>
+    <div className='bubble'>
         {children}
     </div>
   )

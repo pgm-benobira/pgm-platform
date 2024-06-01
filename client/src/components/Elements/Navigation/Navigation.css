@@ -1,0 +1,20 @@
+.navigation {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.navigation__link {
+    color: var(--dark);
+}
+
+.dark-mode .navigation__link {
+    color: var(--light);
+}
+
+.navigation__link:hover,
+.navigation__link.active {
+    color: var(--primary);
+}

@@ -1,0 +1,20 @@
+.theme {
+    all: unset;
+    background-color: var(--light);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.theme:hover {
+    cursor: pointer;
+    outline: 2px solid var(--primary);
+}
+
+.theme svg {
+    width: 25px;
+    height: 25px;
+}
+
+.dark-mode .theme {
+    background-color: var(--dark);
+}
