@@ -1,0 +1,42 @@
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.dark-mode .loading-container {
+    background-color: var(--grey-dark);
+}
+
+.spinner {
+    border: 2px solid var(--light);
+    border-top: 2px solid var(--primary);
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-logo {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+}
