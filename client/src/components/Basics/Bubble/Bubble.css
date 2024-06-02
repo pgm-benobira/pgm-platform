@@ -7,3 +7,11 @@
 .dark-mode .bubble {
     background-color: var(--dark);
 }
+
+.bubble--secondary {
+    background-color: var(--secondary);
+}
+
+.dark-mode .bubble--secondary {
+    background-color: var(--secondary-dark);
+}

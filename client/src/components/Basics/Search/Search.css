@@ -1,0 +1,24 @@
+.search-bar {
+    background-color: var(--light);
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dark-mode .search-bar {
+    background-color: var(--dark);
+}
+
+.search-bar__input {
+    all: unset;
+    width: 100%;
+}
+
+.search-bar__svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 1rem;
+}
