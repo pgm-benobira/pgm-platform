@@ -1,0 +1,36 @@
+.quote {
+    display: flex;
+    gap: 1rem;
+}
+
+.quote > :first-child {
+    width: 70%;
+}
+
+.quote > :last-child {
+    width: 30%;
+}
+
+.quote__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote__author svg {
+    max-width: 6.25rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 40rem) {
+    .quote {
+        flex-direction: column;
+    }
+    .quote > :first-child {
+        width: 100%;
+    }
+    .quote > :last-child {
+        width: 100%;
+    }
+}
