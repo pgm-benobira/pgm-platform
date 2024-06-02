@@ -16,6 +16,11 @@ query GET_PAGE_DATA($slug: String = "") {
         text
       }
     }
+    quote {
+      name
+      role
+      testimonial
+    }
   }
 }
 `;

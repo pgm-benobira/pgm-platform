@@ -50,6 +50,8 @@ export default function Home() {
   const foryou = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'foryou').htmlContent.text);
   const externalLinks = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'externallinks').htmlContent.text);
 
+  // --------- RENDER --------- //
+
   return (
     <div className='container'>
       {/* the top section */}
@@ -81,7 +83,7 @@ export default function Home() {
       <section className="flex bottom">
         <Bubble children={externalLinks} type='secondary'  />
         <div className="flex bottom__right">
-          <Quote testimonial="Ik ben zeer tevreden over de opleiding. De docenten zijn zeer bekwaam en de lessen zijn zeer interessant." name="John Doe" role="Student" />
+          <Quote testimonial={data.page.quote.testimonial} name={data.page.quote.name} role={data.page.quote.role} />
           <Impression fileName={impressionPgm04.fileName} url={impressionPgm04.url} />
         </div>
       </section>

@@ -63,11 +63,26 @@ h1 {
     padding: 2rem;
 }
 
+@media (max-width: 72rem) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3.125rem;
+        padding: 1rem;
+    }
+}
+
 h2 {
     font-size: 1.75rem;
     font-weight: normal;
     line-height: 2.625rem;
     padding-bottom: 1rem;
+}
+
+@media (max-width: 72rem) {
+    h2 {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
 }
 
 /* Highlighted text in orange */
