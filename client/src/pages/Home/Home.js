@@ -80,7 +80,7 @@ export default function Home() {
           <div className="flex middle__right__bottom">
             <div className="foryou">
               <Bubble children={foryou} />
-              <Button text="Inschrijven" link="https://www.arteveldehogeschool.be/node/3854" target='blank' />
+              <Button text="Inschrijven" type='primary' link="https://www.arteveldehogeschool.be/node/3854" target='blank' />
             </div>
             <Impression fileName={impressionPgm03.fileName} url={impressionPgm03.url} />
           </div>

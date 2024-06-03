@@ -8,10 +8,35 @@
     background-color: var(--dark);
 }
 
+/* Bubble with the primary color */
+.bubble--primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* If there is a link inside the bubble and the type is primary (like a button) */
+.bubble--primary a {
+    color: var(--light);
+}
+
+.dark-mode .bubble--primary {
+    background-color: var(--primary);
+}
+
+/* Bubble with the secondary color */
 .bubble--secondary {
     background-color: var(--secondary);
 }
 
+/* If there is a link inside the bubble and the type is secondary (like a button) */
+.bubble--secondary a {
+    color: var(--dark);
+}
+
 .dark-mode .bubble--secondary {
     background-color: var(--secondary-dark);
+}
+
+.dark-mode .bubble--secondary a {
+    color: var(--light);
 }

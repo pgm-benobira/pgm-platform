@@ -24,7 +24,7 @@ export default function Header() {
           <ThemeSwitcher />
           <div className={styles.actions}>
             <Button text="Inloggen" type='secondary' />
-            <Button text="Inschrijven" link="https://www.arteveldehogeschool.be/node/3854" target='blank' />
+            <Button text="Inschrijven" type='primary' link="https://www.arteveldehogeschool.be/node/3854" target='blank' />
           </div>
         </div>
     </header>

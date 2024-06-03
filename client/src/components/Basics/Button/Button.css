@@ -3,29 +3,18 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    background-color: var(--primary);
-    color: var(--light);
-    border-radius: 2rem;
-    padding: 2rem;
 }
 
-.button:hover {
+.button.bubble:hover {
+    cursor: pointer;
+    outline: var(--primary) solid 2px;
     background-color: var(--light);
-    color: var(--primary);
-    outline: 2px solid var(--primary);
 }
 
-.dark-mode .button:hover {
+.dark-mode .button.bubble:hover {
     background-color: var(--dark);
+}
+
+.button.bubble:hover a {
     color: var(--primary);
-}
-
-.button--secondary {
-    background-color: var(--secondary);
-    color: var(--dark);
-}
-
-.dark-mode .button--secondary {
-    background-color: var(--secondary-dark);
-    color: var(--light);
 }

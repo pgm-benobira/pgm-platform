@@ -9,6 +9,10 @@
     display: none;
 }
 
+.animation__container {
+    display: none;
+}
+
 .animation {
     display: none;
 }
