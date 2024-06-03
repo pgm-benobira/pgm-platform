@@ -19,7 +19,7 @@ export default function Header() {
           <Button type='secondary' />
         </div>
         <div className={styles.hamburger} onClick={toggleMenu}>
-          {menuOpen ? 'x' : <Hamburger/>}
+          {menuOpen ? <Hamburger menuStatus={'open'}/> : <Hamburger/>}
         </div>
         <div className={`${styles.operations} ${menuOpen ? styles.open : ''}`}>
           <Navigation />

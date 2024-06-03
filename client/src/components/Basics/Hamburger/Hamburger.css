@@ -1,20 +1,34 @@
-.hamburger-icon {
+.menu-button {
     all: unset;
     background-color: var(--light);
     border-radius: 2rem;
     padding: 2rem;
 }
 
-.hamburger-icon:hover {
+.menu-button:hover {
     cursor: pointer;
     outline: 2px solid var(--primary);
 }
 
-.hamburger-icon svg {
+.hamburger {
     width: 25px;
     min-width: 25px;
 }
 
-.dark-mode .hamburger-icon {
+.hamburger.open {
+    display: none;
+}
+
+.cross {
+    width: 25px;
+    min-width: 25px;
+    display: none;
+}
+
+.cross.open {
+    display: block;
+}
+
+.dark-mode .menu-button {
     background-color: var(--dark);
 }
