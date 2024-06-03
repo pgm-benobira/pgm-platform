@@ -6,6 +6,13 @@
     gap: 4rem;
 }
 
+@media (max-width: 100rem) {
+    .navigation {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
 .navigation__link {
     color: var(--dark);
 }

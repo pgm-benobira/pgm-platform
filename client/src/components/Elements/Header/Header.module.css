@@ -4,3 +4,65 @@
     gap: 1rem;
     padding-bottom: 1rem;
 }
+
+.hamburger {
+    display: none;
+}
+
+.animation {
+    display: none;
+}
+
+.operations {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+}
+
+@media (max-width: 100rem) {
+    .hamburger {
+        display: flex;
+        z-index: 2;
+    }
+    .animation {
+        display: flex;
+        flex: 1;
+    }
+    .operations {
+        display: none;
+        z-index: 1;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2rem;
+    }
+    .operations::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--grey);
+        backdrop-filter: blur(2px);
+        z-index: -1;
+    }
+    .operations.open {
+        display: flex;
+    }
+}
+
+@media (max-width: 72rem) {
+    .operations {
+        padding: 1rem;
+    }
+}

@@ -1,24 +1,20 @@
-.theme {
+.hamburger-icon {
     all: unset;
     background-color: var(--light);
     border-radius: 2rem;
     padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.theme:hover {
+.hamburger-icon:hover {
     cursor: pointer;
     outline: 2px solid var(--primary);
 }
 
-.theme svg {
+.hamburger-icon svg {
     width: 25px;
     min-width: 25px;
-    height: 25px;
 }
 
-.dark-mode .theme {
+.dark-mode .hamburger-icon {
     background-color: var(--dark);
 }
