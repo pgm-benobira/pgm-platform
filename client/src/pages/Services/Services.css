@@ -1,0 +1,7 @@
+.services {
+    justify-content: flex-start;
+}
+
+.service {
+    width: calc(50% - 0.5rem);
+}
