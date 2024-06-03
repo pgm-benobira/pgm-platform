@@ -30,9 +30,25 @@
         display: flex;
         z-index: 2;
     }
-    .animation {
+    .animation__container {
+        width: 100%;
         display: flex;
-        flex: 1;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 2rem;
+    }
+    .animation {
+        display: block;
+        width: 100%;
+        max-width: 100rem;
+        height: 50px;
+        background: url('../../../assets/images/rocket.svg') no-repeat center center;
+        background-size: contain;
+        position: absolute;
+        animation: rocketMove 15s linear infinite;
+        z-index: 1;
     }
     .operations {
         display: none;
@@ -64,5 +80,35 @@
 @media (max-width: 72rem) {
     .operations {
         padding: 1rem;
+    }
+}
+
+@keyframes rocketMove {
+    0% {
+        transform: translateX(-100%) translateY(0) rotate(0deg);
+    }
+    12.5% {
+        transform: translateX(-50%) translateY(-15px) rotate(45deg);
+    }
+    25% {
+        transform: translateX(0) translateY(0) rotate(90deg);
+    }
+    37.5% {
+        transform: translateX(50%) translateY(10px) rotate(135deg);
+    }
+    50% {
+        transform: translateX(100%) translateY(0) rotate(180deg);
+    }
+    62.5% {
+        transform: translateX(50%) translateY(20px) rotate(135deg);
+    }
+    75% {
+        transform: translateX(0) translateY(0) rotate(90deg);
+    }
+    87.5% {
+        transform: translateX(-50%) translateY(-5px) rotate(15deg);
+    }
+    100% {
+        transform: translateX(-100%) translateY(0) rotate(0deg);
     }
 }

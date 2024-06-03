@@ -15,9 +15,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
         <Logo />
-        <div className={styles.animation}>
-          <Button type='secondary' />
-        </div>
+        <div className={styles.animation__container}><div className={styles.animation}></div></div>
         <div className={styles.hamburger} onClick={toggleMenu}>
           {menuOpen ? <Hamburger menuStatus={'open'}/> : <Hamburger/>}
         </div>

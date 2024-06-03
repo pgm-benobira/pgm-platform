@@ -11,3 +11,7 @@
     object-fit: cover;
     object-position: center;
 }
+
+.dark-mode .impression {
+    filter: brightness(0.8);
+}
