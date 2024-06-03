@@ -1,3 +1,11 @@
+/**
+ * Services page
+ * An overview of the services that the study offers.
+ * It consists of two sections:
+ * - the top section: the tagline
+ * - the middle section: the services and the impression
+ */
+
 import React from 'react'
 // html-react-parser
 import parse from 'html-react-parser'
@@ -13,6 +21,8 @@ import { Helmet } from 'react-helmet';
 // components
 import Loading from '../../components/Elements/Loading';
 import Bubble from '../../components/Basics/Bubble';
+import Impression from '../../components/Basics/Impression';
+import Redirect from '../../components/Basics/Redirect';
 
 export default function Services() {
   const slug = 'services';
@@ -30,6 +40,8 @@ export default function Services() {
 
   const tagline = parse(data.page.tagline.text);
 
+  const impressionPgm07 = data.page.impressions.find(impression => impression.fileName === 'pgm-07.jpg');
+
   // --------- RENDER --------- //
 
   return (
@@ -41,20 +53,25 @@ export default function Services() {
       </Helmet>
 
       {/* the top section */}
-      <section className="top">
+      <section className="services-top">
         {tagline}
       </section>
 
-      {/* the services section */}
-      <section className="flex services">
-        {servicesData.services?.map((service, index) => (
-          <Bubble key={index} addClass='service'>
-            <h2>{service.title}</h2>
-            <p>{service.description}</p>
-          </Bubble>
-        ))}
+      {/* the middle section */}
+      <section className="flex services-middle">
+        <div className="flex services">
+          {servicesData.services?.map((service, index) => (
+            <Bubble key={index} addClass='service'>
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
+            </Bubble>
+          ))}
+        </div>
+        <div className="flex services-middle__right">
+          <Impression fileName={impressionPgm07.fileName} url={impressionPgm07.url} />
+          <Redirect title='Verken onze diensten' link='https://www.arteveldehogeschool.be/nl/onderzoek-en-samenwerking/samenwerken' target='_blank' />
+        </div>
       </section>
-
     </div>
   )
 }

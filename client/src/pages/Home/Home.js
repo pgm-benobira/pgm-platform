@@ -63,8 +63,8 @@ export default function Home() {
       </Helmet>
 
       {/* the top section */}
-      <section className="flex top">
-        <div className="top__left">
+      <section className="flex home-top">
+        <div className="home-top__left">
           {tagline}
           <Search />
           {programmingLanguages}
@@ -73,11 +73,11 @@ export default function Home() {
       </section>
 
       {/* the middle section */}
-      <section className="flex middle">
+      <section className="flex home-middle">
         <Impression fileName={impressionPgm02.fileName} url={impressionPgm02.url} />
-        <div className="flex middle__right">
+        <div className="flex home-middle__right">
           {highlights}
-          <div className="flex middle__right__bottom">
+          <div className="flex foryou__container">
             <div className="foryou">
               <Bubble children={foryou} />
               <Button text="Inschrijven" type='primary' link="https://www.arteveldehogeschool.be/node/3854" target='blank' />
@@ -88,9 +88,9 @@ export default function Home() {
       </section>
 
       {/* the bottom section */}
-      <section className="flex bottom">
+      <section className="flex home-bottom">
         <Bubble children={externalLinks} type='secondary'  />
-        <div className="flex bottom__right">
+        <div className="flex home-bottom__right">
           <Quote testimonial={data.page.quote.testimonial} name={data.page.quote.name} role={data.page.quote.role} />
           <Impression fileName={impressionPgm04.fileName} url={impressionPgm04.url} />
         </div>

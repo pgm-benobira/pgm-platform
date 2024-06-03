@@ -6,6 +6,12 @@
     padding-top: 2rem;
 }
 
+@media (max-width: 72rem) {
+    .footer {
+        padding-bottom: 1rem;
+    }
+}
+
 .link {
     color: var(--primary);
 }

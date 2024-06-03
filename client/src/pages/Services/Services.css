@@ -1,7 +1,33 @@
+/* --------------- MIDDLE SECTION --------------- */
+
+/* @media (max-width: 100rem) {
+    .services-middle {
+        flex-direction: column;
+    }
+} */
+
 .services {
     justify-content: flex-start;
+    width: 55%;
+}
+
+@media (max-width: 100rem) {
+    .services {
+        width: 100%;
+    }
 }
 
 .service {
     width: calc(50% - 0.5rem);
+}
+
+@media (max-width: 48rem) {
+    .service {
+        width: 100%;
+    }
+}
+
+.services-middle__right {
+    flex: 1;
+    flex-direction: column;
 }
