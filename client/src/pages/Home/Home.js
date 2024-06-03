@@ -17,9 +17,11 @@ import { GET_PAGE_DATA } from '../../graphql/queries';
 import './Home.css';
 // pages
 import Error from '../Error';
+// helmet
+import { Helmet } from 'react-helmet';
 // components
-import Impression from '../../components/Basics/Impression';
 import Loading from '../../components/Elements/Loading';
+import Impression from '../../components/Basics/Impression';
 import Search from '../../components/Basics/Search';
 import Bubble from '../../components/Basics/Bubble';
 import Button from '../../components/Basics/Button/Button';
@@ -54,6 +56,12 @@ export default function Home() {
 
   return (
     <div className='container'>
+      {/* head data */}
+      <Helmet>
+        <title>{data.page.title}</title>
+        <meta name='description' content={data.page.pageDescription}/>
+      </Helmet>
+
       {/* the top section */}
       <section className="flex top">
         <div className="top__left">
