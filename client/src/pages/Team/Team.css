@@ -1,0 +1,62 @@
+/* --------------- MIDDLE SECTION --------------- */
+
+.team-member {
+    width: 60%;
+}
+
+.team-member__nav {
+    flex: 1;
+    flex-direction: column;
+}
+
+.nav__container {
+    display: flex;
+    flex: 1;
+}
+
+.nav__container:hover {
+    cursor: pointer;
+    outline: 2px solid var(--primary);
+    border-radius: 2rem;
+}
+
+.nav__container > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-nav {
+    width: 100%;
+    max-width: 12rem;
+    padding: 2rem;
+}
+
+.svg-nav--previous {
+    transform: rotate(-135deg);
+}
+
+.svg-nav--next {
+    transform: rotate(45deg);
+}
+
+/* --------------- TEAM ROW --------------- */
+
+.team-row__member {
+    flex: 1;
+}
+
+.team-row__member:hover {
+    cursor: pointer;
+}
+
+/* --------------- BOTTOM SECTION --------------- */
+
+.team-bottom .vacatures {
+    width: 65%;
+}
+
+.team-bottom {
+    flex: 1;
+}

@@ -38,4 +38,24 @@ query GET_ALL_SERVICES {
 }
 `;
 
-export { GET_PAGE_DATA, GET_ALL_SERVICES };
+// To get all the team members for the team page
+const GET_ALL_TEAM_MEMBERS = gql`
+query GET_ALL_TEAM_MEMBERS {
+  teamMembers {
+    name
+    link
+    description
+    image {
+      url
+      fileName
+    }
+    functions {
+      ... on Function {
+        title
+      }
+    }
+  }
+}
+`;
+
+export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS };

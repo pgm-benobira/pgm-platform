@@ -1,0 +1,14 @@
+.team-member {
+    display: flex;
+    gap: 1rem;
+}
+
+.team-member > * {
+    flex: 1;
+}
+
+.team-member__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
