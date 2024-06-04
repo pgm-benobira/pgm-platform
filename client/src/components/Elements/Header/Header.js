@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from './Header.module.css'
 
@@ -12,6 +12,14 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [menuOpen])
+
   return (
     <header className={styles.header}>
         <Logo />
@@ -20,7 +28,7 @@ export default function Header() {
           {menuOpen ? <Hamburger menuStatus={'open'}/> : <Hamburger/>}
         </div>
         <div className={`${styles.operations} ${menuOpen ? styles.open : ''}`}>
-          <Navigation />
+          <Navigation closeMenu={toggleMenu} />
           <ThemeSwitcher />
           <div className={styles.actions}>
             <Button text="Inloggen" type='secondary' />

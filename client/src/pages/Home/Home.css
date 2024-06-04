@@ -143,6 +143,12 @@
     gap: 1rem;
 }
 
+@media (max-width: 30rem) {
+    .externalLinks {
+        gap: 4rem;
+    }
+}
+
 .externalLink {
     background-color: var(--light);
     padding: 2rem;
@@ -161,6 +167,17 @@
 
 .externalLink:hover {
     outline: 2px solid var(--primary);
+}
+
+@media (max-width: 30rem) {
+    .externalLink,
+    .dark-mode .externalLink {
+        background: none;
+        padding: 0;
+    }
+    .externalLink:hover {
+        outline: none;
+    }
 }
 
 .externalLink svg {

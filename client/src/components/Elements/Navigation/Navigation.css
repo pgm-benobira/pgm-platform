@@ -9,7 +9,8 @@
 @media (max-width: 100rem) {
     .navigation {
         flex-direction: column;
-        gap: 4rem;
+        text-align: center;
+        gap: 0;
     }
 }
 
@@ -19,6 +20,13 @@
 
 .dark-mode .navigation__link {
     color: var(--light);
+}
+
+@media (max-width: 100rem) {
+    .navigation__link {
+        padding: 1.5rem;
+        width: 100%;
+    }
 }
 
 .navigation__link:hover,

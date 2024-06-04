@@ -14,7 +14,7 @@ export default function TeamMember({ fileName, url, member, functions, descripti
                 <p>Functie(s): <span className='focus'>{functions}</span></p>
                 <p>{description}</p>
             </Bubble>
-            <Redirect title='Connect' link={socialLink} target='_blank' />
+            <Redirect title='Meer weten' link={socialLink} target='_blank' />
         </div>
     </div>
   )

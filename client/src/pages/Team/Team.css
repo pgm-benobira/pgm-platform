@@ -4,7 +4,7 @@
     width: 60%;
 }
 
-@media (max-width: 72rem) {
+@media (max-width: 80rem) {
     .team-member {
         width: 80%;
     }
