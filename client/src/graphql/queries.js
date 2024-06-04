@@ -64,8 +64,16 @@ query GET_ALL_BLOG_POSTS {
   blogPosts {
     title
     date
+    slug
+    page {
+      slug
+    }
     blogTags {
       title
+    }
+    image {
+      fileName
+      url
     }
   }
 }

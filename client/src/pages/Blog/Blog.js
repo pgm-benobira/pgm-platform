@@ -4,16 +4,13 @@ import parse from 'html-react-parser'
 // graphql
 import { useQuery } from '@apollo/client';
 import { GET_PAGE_DATA, GET_ALL_BLOG_POSTS } from '../../graphql/queries';
-// styles
-import './Blog.css';
 // pages
 import Error from '../Error';
 // helmet
 import { Helmet } from 'react-helmet';
 // components
 import Loading from '../../components/Elements/Loading';
-import Tag from '../../components/Basics/Tag';
-import Bubble from '../../components/Basics/Bubble';
+import Card from '../../components/Elements/Card/Card';
 
 export default function Blog() {
   const slug = 'blog';
@@ -48,16 +45,16 @@ export default function Blog() {
 
       {/* the middle section */}
       <section className="flex blog-middle">
-        {/* blog posts */}
-        <div className="blog-posts">
-          {blogPostsData.blogPosts.map(post => (
-            <Bubble key={post.slug} className="blog-post">
-              <h2>{post.title}</h2>
-              <p>{post.date}</p>
-              <div>{post.blogTags.map(tag => <Tag>{tag.title}</Tag>)}</div>
-            </Bubble>
-          ))}
-        </div>
+        {blogPostsData.blogPosts.map(post => (
+          <Card
+            page={post.page.slug}
+            slug={post.slug}
+            title={post.title}
+            date={post.date}
+            tags={post.blogTags}
+            fileName={post.image.fileName}
+            url={post.image.url} />
+        ))}
       </section>
     </div>
   )
