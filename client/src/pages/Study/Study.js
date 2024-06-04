@@ -12,6 +12,12 @@ import Error from '../Error';
 import { Helmet } from 'react-helmet';
 // components
 import Loading from '../../components/Elements/Loading';
+import Bubble from '../../components/Basics/Bubble';
+import Impression from '../../components/Basics/Impression';
+import Button from '../../components/Basics/Button';
+import Quote from '../../components/Basics/Quote/Quote';
+import Redirect from '../../components/Basics/Redirect';
+import Media from '../../components/Basics/Media';
 
 export default function Study() {
   const slug = 'study';
@@ -28,6 +34,15 @@ export default function Study() {
 
   const tagline = parse(data.page.tagline.text);
 
+  const video = data.page.impressions.find(video => video.fileName === 'video.mp4');
+  const impression05 = data.page.impressions.find(impression => impression.fileName === 'pgm-05.jpg');
+  const impression06 = data.page.impressions.find(impression => impression.fileName === 'pgm-06.jpg');
+
+  const studyIntroduction = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'studyintroduction').htmlContent.text);
+  const studyHighlights = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'studyhighlights').htmlContent.text);
+  const foryou = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'foryou').htmlContent.text);
+  const externalLinks = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'externallinks').htmlContent.text);
+
   // --------- RENDER --------- //
 
   return (
@@ -39,10 +54,35 @@ export default function Study() {
       </Helmet>
 
       {/* the top section */}
-      <section className="top">
+      <section className="study-top">
         {tagline}
       </section>
 
+      {/* the middle section */}
+      <section className="flex study-middle">
+        <Media url={video.url} />
+        <div className="flex study-middle__right">
+          <Bubble children={studyIntroduction}/>
+          <div class="study-highlights">
+            {studyHighlights}
+            <Impression fileName={impression05.fileName} url={impression05.url}/>
+          </div>
+          <Button text="Inschrijven" type='primary' link="https://www.arteveldehogeschool.be/node/3854" target='blank' />
+        </div>
+      </section>
+
+      {/* the bottom section */}
+      <section className="flex study-bottom">
+        <div className="flex study-bottom__left">
+          <Quote testimonial={data.page.quote.testimonial} name={data.page.quote.name} role={data.page.quote.role}/>
+          <Impression fileName={impression06.fileName} url={impression06.url}/>
+          <Redirect title='Ontdek meer over de opleiding' link='https://www.arteveldehogeschool.be/nl/opleidingen/graduaat/programmeren' target='_blank' />
+        </div>
+        <div className="flex study-bottom__right">
+          <Bubble children={foryou} />
+          <Bubble children={externalLinks} type='secondary'  />
+        </div>
+      </section>
     </div>
   )
 }

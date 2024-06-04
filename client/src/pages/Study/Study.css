@@ -1,0 +1,50 @@
+/* --------------- MIDDLE SECTION --------------- */
+
+.study-middle__right {
+    width: 45%;
+}
+
+.study-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.study-highlight {
+    position: relative;
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 2rem;
+    width: calc(50% - 0.5rem);
+    display: flex;
+    align-items: flex-end;
+}
+
+.dark-mode .study-highlight {
+    background-color: var(--secondary-dark);
+}
+
+.study-highlight::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+}
+
+.study-highlight h2 {
+    padding: 0;
+    padding-top: 6rem;
+}
+
+.study-highlight svg {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    max-height: 4rem;
+    max-width: 4rem;
+}

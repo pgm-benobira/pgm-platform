@@ -48,7 +48,7 @@ export default function Home() {
   const impressionPgm04 = data.page.impressions.find(impression => impression.fileName === 'pgm-04.jpg');
 
   const programmingLanguages = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'programminglanguages').htmlContent.text);
-  const highlights = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'highlights').htmlContent.text);
+  const homeHighlights = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'homehighlights').htmlContent.text);
   const foryou = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'foryou').htmlContent.text);
   const externalLinks = parse(data.page.pageContents.find(pageContent => pageContent.slug === 'externallinks').htmlContent.text);
 
@@ -76,7 +76,7 @@ export default function Home() {
       <section className="flex home-middle">
         <Impression fileName={impressionPgm02.fileName} url={impressionPgm02.url} />
         <div className="flex home-middle__right">
-          {highlights}
+          {homeHighlights}
           <div className="flex foryou__container">
             <div className="foryou">
               <Bubble children={foryou} />
