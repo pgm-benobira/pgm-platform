@@ -10,7 +10,12 @@ import Hamburger from '../../Basics/Hamburger'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => {
+    // only do this when the screen is smaller than 1600px and the hamburgermenu appears
+    if (window.innerWidth <= 1600) {
+      setMenuOpen(!menuOpen)
+    }
+  };
 
   useEffect(() => {
     if (menuOpen) {

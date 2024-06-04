@@ -58,4 +58,17 @@ query GET_ALL_TEAM_MEMBERS {
 }
 `;
 
-export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS };
+// To get all the blog posts for the blog page
+const GET_ALL_BLOG_POSTS = gql`
+query GET_ALL_BLOG_POSTS {
+  blogPosts {
+    title
+    date
+    blogTags {
+      title
+    }
+  }
+}
+`;
+
+export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS };
