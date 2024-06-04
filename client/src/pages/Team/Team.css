@@ -4,9 +4,27 @@
     width: 60%;
 }
 
+@media (max-width: 72rem) {
+    .team-member {
+        width: 80%;
+    }
+}
+
+@media (max-width: 60rem) {
+    .team-member {
+        width: 100%;
+    }
+}
+
 .team-member__nav {
     flex: 1;
     flex-direction: column;
+}
+
+@media (max-width: 60rem) {
+    .team-member__nav {
+        display: none;
+    }
 }
 
 .nav__container {
@@ -30,6 +48,7 @@
 .svg-nav {
     width: 100%;
     max-width: 12rem;
+    min-width: 6rem;
     padding: 2rem;
 }
 
@@ -47,6 +66,12 @@
     flex: 1;
 }
 
+@media (max-width: 44rem) {
+    .team-row__member {
+        min-width: 10rem;
+    }
+}
+
 .team-row__member:hover {
     cursor: pointer;
 }
@@ -55,6 +80,12 @@
 
 .team-bottom .vacatures {
     width: 65%;
+}
+
+@media (max-width: 56rem) {
+    .team-bottom .vacatures {
+        width: 100%;
+    }
 }
 
 .team-bottom {
