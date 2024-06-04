@@ -13,10 +13,6 @@
     object-position: center;
 }
 
-.dark-mode .media {
-    filter: brightness(0.8);
-}
-
 .play-button {
     position: absolute;
     top: 50%;
@@ -35,4 +31,12 @@
     height: 4rem;
     position: relative;
     left: 0.4rem;
+}
+
+@media (max-width: 56rem) {
+    .play-button svg {
+        width: 2rem;
+        height: 2rem;
+        left: 0.3rem;
+    }
 }

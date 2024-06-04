@@ -1,3 +1,12 @@
+/**
+ * Study page
+ * The Study page is the page that provides information about the study program.
+ * It consists of three sections:
+ * - the top section: the tagline
+ * - the middle section: the introduction, the highlights and the button to subscribe
+ * - the bottom section: the quote, the external links and the redirect to the official website
+ */
+
 import React from 'react'
 // html-react-parser
 import parse from 'html-react-parser'
@@ -76,7 +85,7 @@ export default function Study() {
         <div className="flex study-bottom__left">
           <Quote testimonial={data.page.quote.testimonial} name={data.page.quote.name} role={data.page.quote.role}/>
           <Impression fileName={impression06.fileName} url={impression06.url}/>
-          <Redirect title='Ontdek meer over de opleiding' link='https://www.arteveldehogeschool.be/nl/opleidingen/graduaat/programmeren' target='_blank' />
+          <Redirect title='Benieuwd naar meer?' link='https://www.arteveldehogeschool.be/nl/opleidingen/graduaat/programmeren' target='_blank' />
         </div>
         <div className="flex study-bottom__right">
           <Bubble children={foryou} />
