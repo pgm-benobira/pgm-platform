@@ -16,7 +16,7 @@ export const ROUTES = {
         title: 'Projecten',
     },
     project: {
-        path: '/project/:slug',
+        path: '/projects/:slug',
     },
     blog: {
         path: '/blog',

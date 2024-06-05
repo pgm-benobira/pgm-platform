@@ -79,4 +79,24 @@ query GET_ALL_BLOG_POSTS {
 }
 `;
 
-export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS };
+// To get all the projects for the projects page
+const GET_ALL_PROJECTS = gql`
+query GET_ALL_PROJECTS {
+  projects {
+    title
+    slug
+    page {
+      slug
+    }
+    programTracks {
+      title
+    }
+    images(first: 1) {
+      fileName
+      url
+    }
+  }
+}
+`;
+
+export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_ALL_PROJECTS };

@@ -10,7 +10,7 @@ import Error from '../Error';
 import { Helmet } from 'react-helmet';
 // components
 import Loading from '../../components/Elements/Loading';
-import Card from '../../components/Elements/Card/Card';
+import Card from '../../components/Elements/Card';
 
 export default function Blog() {
   const slug = 'blog';
