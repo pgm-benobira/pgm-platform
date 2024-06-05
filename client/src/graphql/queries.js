@@ -69,6 +69,7 @@ query GET_ALL_BLOG_POSTS {
       slug
     }
     blogTags {
+      id
       title
     }
     image {
@@ -89,6 +90,7 @@ query GET_ALL_PROJECTS {
       slug
     }
     programTracks {
+      id
       title
     }
     images(first: 1) {

@@ -47,6 +47,7 @@ export default function Blog() {
       <section className="flex blog-middle">
         {blogPostsData.blogPosts.map(post => (
           <Card
+            key={post.slug}
             page={post.page.slug}
             slug={post.slug}
             title={post.title}

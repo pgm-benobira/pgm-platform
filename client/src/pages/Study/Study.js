@@ -72,7 +72,7 @@ export default function Study() {
         <Media url={video.url} />
         <div className="flex study-middle__right">
           <Bubble children={studyIntroduction}/>
-          <div class="study-highlights">
+          <div className="study-highlights">
             {studyHighlights}
             <Impression fileName={impression05.fileName} url={impression05.url}/>
           </div>

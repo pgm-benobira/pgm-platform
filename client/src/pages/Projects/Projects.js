@@ -55,12 +55,12 @@ export default function Projects() {
       </section>
 
       {/* the filter buttons */}
-      <Bubble addClass='flex filter-buttons' >
+      <Bubble addClass='flex flex--center filter-buttons' >
         <div className='filter-button' onClick={() => handleProjectTrackChange(null)}>
           <Tag>Alle projecten bekijken</Tag>
         </div>
         {[...new Set(projectsData.projects.flatMap(project => project.programTracks.map(track => track.title)))].map(track => (
-          <div className='filter-button' onClick={() => handleProjectTrackChange(track)}>
+          <div className='filter-button' onClick={() => handleProjectTrackChange(track)} key={track}>
             <Tag>{track}</Tag>
           </div>
         ))}
@@ -70,6 +70,7 @@ export default function Projects() {
       <section className="flex middle">
         {filteredProjects.map(project => (
           <Card
+            key={project.slug}
             page={project.page.slug}
             slug={project.slug}
             title={project.title}
