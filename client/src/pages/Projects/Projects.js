@@ -76,8 +76,8 @@ export default function Projects() {
             title={project.title}
             date={project.date}
             tags={project.programTracks}
-            fileName={project.images[0].fileName}
-            url={project.images[0].url} />
+            fileName={project.image.fileName}
+            url={project.image.url} />
         ))}
       </section>
     </div>

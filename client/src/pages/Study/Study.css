@@ -90,8 +90,6 @@
     flex-direction: column;
 }
 
-@media (max-width: 64rem) {
-    .study-bottom__right > * {
-        width: 100%;
-    }
+.study-bottom__right > * {
+    width: 100%;
 }

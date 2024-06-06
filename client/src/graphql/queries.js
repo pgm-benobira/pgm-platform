@@ -80,6 +80,30 @@ query GET_ALL_BLOG_POSTS {
 }
 `;
 
+// To get a blog post by its slug
+const GET_BLOG_POST_BY_SLUG = gql`
+query GET_BLOG_POST_BY_SLUG($slug: String = "") {
+  blogPost(where: {slug: $slug}) {
+    title
+    date
+    slug
+    teamMember {
+      name
+    }
+    blogTags {
+      title
+    }
+    image {
+      fileName
+      url
+    }
+    content {
+      html
+    }
+  }
+}
+`;
+
 // To get all the projects for the projects page
 const GET_ALL_PROJECTS = gql`
 query GET_ALL_PROJECTS {
@@ -93,7 +117,7 @@ query GET_ALL_PROJECTS {
       id
       title
     }
-    images(first: 1) {
+    image {
       fileName
       url
     }
@@ -101,4 +125,25 @@ query GET_ALL_PROJECTS {
 }
 `;
 
-export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_ALL_PROJECTS };
+// To get a project by its slug
+const GET_PROJECT_BY_SLUG = gql`
+query GET_PROJECT_BY_SLUG($slug: String = "") {
+  project(where: {slug: $slug}) {
+    title
+    slug
+    description
+    course {
+      title
+    }
+    programTracks {
+      title
+    }
+    image {
+      fileName
+      url
+    }
+  }
+}
+`;
+
+export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG, GET_ALL_PROJECTS, GET_PROJECT_BY_SLUG };

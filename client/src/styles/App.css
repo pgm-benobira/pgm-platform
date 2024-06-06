@@ -123,4 +123,12 @@ a {
 
 .flex--center {
     justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect for the filter buttons */
+.filter-button:hover {
+    cursor: pointer;
+    outline: 2px solid var(--primary);
+    border-radius: 2rem;
 }

@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    height: 100%;
 }
 
 .redirect h1 {
@@ -22,11 +23,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .arrow {
     max-width: 3rem;
     width: 100%;
+}
+
+.left {
+    max-width: 2rem;
+    transform: rotate(225deg);
 }
 
 .redirect:hover .arrow {
@@ -39,5 +46,18 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.redirect:hover .left {
+    animation: spin2 0.8s ease-in-out;
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(225deg);
+    }
+    100% {
+        transform: rotate(585deg);
     }
 }
