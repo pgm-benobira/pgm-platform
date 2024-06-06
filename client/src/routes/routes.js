@@ -33,4 +33,8 @@ export const ROUTES = {
         path: '/team',
         title: 'Team',
     },
+    results: {
+        path: '/results/:query',
+        title: 'Zoekresultaten',
+    },
 }

@@ -1,0 +1,17 @@
+/* --------------- TOP SECTION --------------- */
+
+.resultstop h1 {
+    flex: 1;
+}
+
+@media (max-width: 56rem) {
+    .resultstop {
+        flex-direction: column;
+    }
+}
+
+/* --------------- MIDDLE SECTION --------------- */
+
+.resultsmiddle {
+    flex-direction: column;
+}

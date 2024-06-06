@@ -146,4 +146,63 @@ query GET_PROJECT_BY_SLUG($slug: String = "") {
 }
 `;
 
-export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG, GET_ALL_PROJECTS, GET_PROJECT_BY_SLUG };
+// Search content query
+const GET_SEARCH_ITEMS = gql`
+  query GET_SEARCH_ITEMS($query: String = "") {
+    services(where: { 
+      OR: [
+        { title_contains: $query }, 
+        { description_contains: $query }
+      ]
+    }) {
+      title
+      description
+    }
+    projects(where: { title_contains: $query }) {
+      title
+      slug
+      page {
+        slug
+      }
+      programTracks {
+        id
+        title
+      }
+      image {
+        fileName
+        url
+      }
+    }
+    blogPosts(where: { title_contains: $query }) {
+      title
+      date
+      slug
+      page {
+        slug
+      }
+      blogTags {
+        title
+        id
+      }
+      image {
+        fileName
+        url
+      }
+    }
+    teamMembers(where: { 
+      OR: [
+        { name_contains: $query }, 
+        { description_contains: $query }
+      ]
+    }) {
+      name
+      description
+      image {
+        url
+        fileName
+      }
+    }
+  }
+`;
+
+export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG, GET_ALL_PROJECTS, GET_PROJECT_BY_SLUG, GET_SEARCH_ITEMS };

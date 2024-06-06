@@ -18,6 +18,8 @@ import Bubble from '../../components/Basics/Bubble';
 import Impression from '../../components/Basics/Impression';
 import Tag from '../../components/Basics/Tag';
 import Redirect from '../../components/Basics/Redirect';
+// routes
+import { ROUTES } from '../../routes/routes';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -40,7 +42,7 @@ export default function BlogPost() {
 
       {/* the top section */}
       <section className="flex blog-post-top">
-        <Redirect link='/blog' orientation='left' />
+        <Redirect link={ROUTES.blog.path} orientation='left' />
         <h1>{data.blogPost.title}</h1>
       </section>
 

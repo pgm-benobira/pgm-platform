@@ -18,6 +18,8 @@ import Bubble from '../../components/Basics/Bubble';
 import Impression from '../../components/Basics/Impression';
 import Tag from '../../components/Basics/Tag';
 import Redirect from '../../components/Basics/Redirect';
+// routes
+import { ROUTES } from '../../routes/routes';
 
 export default function Project() {
   const { slug } = useParams();
@@ -40,7 +42,7 @@ export default function Project() {
 
       {/* the top section */}
       <section className="flex project-top">
-        <Redirect link='/projects' orientation='left' />
+        <Redirect link={ROUTES.projects.path} orientation='left' />
         <h1>{data.project.title}</h1>
       </section>
 

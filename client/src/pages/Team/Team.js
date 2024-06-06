@@ -58,7 +58,13 @@ export default function Team() {
 
       {/* the middle section */}
       <section className="flex team-middle">
-        <TeamMember fileName={member.image.fileName} url={member.image.url} member={member.name} functions={memberFunctions} description={member.description} socialLink={member.link} />
+        <TeamMember 
+          fileName={member.image.fileName}
+          url={member.image.url}
+          member={member.name}
+          functions={memberFunctions}
+          description={member.description}
+          socialLink={member.link} />
         <div className='flex team-member__nav'>
           <Bubble addContainer='nav__container nav__container--previous' onClick={() => setCurrentMember(current => Math.max(current - 1, 0))}>
             <svg className="svg-nav svg-nav--previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.828 50.828"><path fill="none" stroke="#ff6e1f" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m49.414 1.414-48 48m8-48h40v40" data-name="Icon akar-arrow-up-right"></path></svg>

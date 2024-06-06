@@ -92,8 +92,9 @@ h2 {
     }
 }
 
-/* Highlighted text in orange */
-.focus {
+/* Highlighted text and links in orange */
+.focus,
+a.active {
     color: var(--primary);
 }
 

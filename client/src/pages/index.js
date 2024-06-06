@@ -8,5 +8,6 @@ import BlogPost from './BlogPost';
 import Services from './Services';
 import Team from './Team';
 import Error from './Error';
+import Results from './Results';
 
-export { Home, Study, Program, Projects, Project, Blog, BlogPost, Services, Team, Error };
+export { Home, Study, Program, Projects, Project, Blog, BlogPost, Services, Team, Error, Results };

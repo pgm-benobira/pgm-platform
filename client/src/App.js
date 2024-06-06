@@ -3,7 +3,7 @@ import './styles/App.css';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements, } from "react-router-dom";
 import { ROUTES } from "./routes/routes";
 import Root from "./layouts/Root";
-import { Home, Study, Program, Projects, Project, Blog, BlogPost, Services, Team, Error } from "./pages";
+import { Home, Study, Program, Projects, Project, Blog, BlogPost, Services, Team, Error, Results } from "./pages";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root />} errorElement={<Error />}>
@@ -16,6 +16,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path={ROUTES.blogPost.path} element={<BlogPost />} />
     <Route path={ROUTES.services.path} element={<Services />} />
     <Route path={ROUTES.team.path} element={<Team />} />
+    <Route path={ROUTES.results.path} element={<Results />} />
   </Route>
 ));
 
