@@ -17,9 +17,19 @@
 }
 
 .blog-post__info,
-.blog-post__tags,
-.blog-post__author {
+.blog-post__tags__container,
+.blog-post__author__container {
     flex: 1;
+}
+
+.blog-post__date__container,
+.blog-post__author__container {
+    width: auto;
+}
+
+.blog-post__date,
+.blog-post__author {
+    height: 100%;
 }
 
 .blog-post__tags {
@@ -36,9 +46,6 @@
     .blog-post__credtis {
         flex-direction: column;
     }
-    .blog-post__credtis > * {
-        padding: 1.4rem;
-    }
 }
 
 @media (max-width: 80rem) {
@@ -50,14 +57,17 @@
     }
 }
 
-.blog-post__text {
+.blog-post__text__container {
     width: 50%;
+}
+
+.blog-post__text {
     padding: 4rem;
     padding-bottom: 2rem;
 }
 
 @media (max-width: 80rem) {
-    .blog-post__text {
+    .blog-post__text__container {
         width: 100%;
     }
 }

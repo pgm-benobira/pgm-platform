@@ -38,22 +38,23 @@
     }
 }
 
-.info__program-tracks,
-.info__course {
+.program-tracks__container,
+.course__container {
     flex: 1;
 }
 
-.info__program-tracks h2 {
+.program-tracks__container h2 {
     width: 100%;
 }
 
-.info__course {
+.course {
+    height: 100%;
     display: flex;
     align-items: flex-end;
     position: relative;
 }
 
-.info__course::before {
+.course::before {
     content: '';
     position: absolute;
     top: 2rem;
@@ -64,12 +65,12 @@
     border-radius: 50%;
 }
 
-.info__course h2 {
+.course h2 {
     padding: 0;
     padding-top: 7rem;
 }
 
-.info__course svg {
+.course svg {
     position: absolute;
     top: 2rem;
     right: 2rem;

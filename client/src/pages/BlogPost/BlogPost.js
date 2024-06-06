@@ -48,14 +48,14 @@ export default function BlogPost() {
       <section className="flex blog-post">
         <div className='flex blog-post__info'>
           <div className='flex blog-post__credtis'>
-            <Bubble addContainer='flex flex--center'>
+            <Bubble addContainer='blog-post__date__container' addClass='blog-post__date flex flex--center'>
               <p>Gepubliceerd op: {data.blogPost.date}</p>
             </Bubble>
-            <Bubble addContainer='flex flex--center blog-post__author'>
+            <Bubble addContainer='blog-post__author__container' addClass='blog-post__author flex flex--center '>
               <p>Geschreven door: {data.blogPost.teamMember.name}</p>
             </Bubble>
           </div>
-          <Bubble addContainer='flex flex--center blog-post__tags'>
+          <Bubble addContainer='blog-post__tags__container' addClass='blog-post__tags flex flex--center'>
             {data.blogPost.blogTags.map(tag => (
               <Tag key={tag.title}>{tag.title}</Tag>
             ))}
@@ -63,7 +63,7 @@ export default function BlogPost() {
         </div>
         <div className='flex blog-post__content'>
           <Impression url={data.blogPost.image.url} fileName={data.blogPost.image.fileName} />
-          <Bubble addContainer='blog-post__text'>
+          <Bubble addContainer='blog-post__text__container' addClass='blog-post__text'>
             {parse(data.blogPost.content.html)}
           </Bubble>
         </div>
