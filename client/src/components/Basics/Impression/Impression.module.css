@@ -12,6 +12,6 @@
     object-position: center;
 }
 
-.dark-mode .impression {
+.dark {
     filter: brightness(0.9);
 }

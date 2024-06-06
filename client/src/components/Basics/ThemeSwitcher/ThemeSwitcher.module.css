@@ -19,6 +19,6 @@
     height: 25px;
 }
 
-.dark-mode .theme {
+.dark {
     background-color: var(--dark);
 }

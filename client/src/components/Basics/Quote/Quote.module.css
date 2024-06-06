@@ -9,9 +9,6 @@
 
 .quote > :last-child {
     width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .quote__author {
@@ -19,6 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .quote__author svg {

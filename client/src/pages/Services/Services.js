@@ -61,7 +61,7 @@ export default function Services() {
       <section className="flex services-middle">
         <div className="flex services">
           {servicesData.services?.map((service, index) => (
-            <Bubble key={index} addClass='service'>
+            <Bubble key={index} addContainer='service__container' addClass='service'>
               <h2>{service.title}</h2>
               <p>{service.description}</p>
             </Bubble>

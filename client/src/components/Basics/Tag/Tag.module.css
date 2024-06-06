@@ -5,7 +5,7 @@
     outline: 2px solid var(--secondary);
 }
 
-.dark-mode .tag {
+.dark {
     outline: 2px solid var(--secondary-dark);
 }
 

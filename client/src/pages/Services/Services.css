@@ -17,14 +17,18 @@
     }
 }
 
-.service {
+.service__container {
     width: calc(50% - 0.5rem);
 }
 
 @media (max-width: 48rem) {
-    .service {
+    .service__container {
         width: 100%;
     }
+}
+
+.service {
+    height: 100%;
 }
 
 .services-middle__right {
