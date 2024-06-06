@@ -1,3 +1,11 @@
+/**
+ * Blog page
+ * Page to display all blog posts
+ * It consists of two sections:
+ * - the top section: the tagline
+ * - the middle section: the blog posts
+ */
+
 import React from 'react'
 // html-react-parser
 import parse from 'html-react-parser'

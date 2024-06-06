@@ -33,7 +33,7 @@
     flex: 1;
 }
 
-.dark-mode .language {
+.programming-languages--dark .language {
     background-color: var(--dark);
 }
 
@@ -83,7 +83,7 @@
     align-items: flex-end;
 }
 
-.dark-mode .home-highlight {
+.home-highlights--dark .home-highlight {
     background-color: var(--secondary-dark);
 }
 

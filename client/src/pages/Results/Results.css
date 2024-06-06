@@ -1,17 +1,17 @@
 /* --------------- TOP SECTION --------------- */
 
-.resultstop h1 {
+.results-top h1 {
     flex: 1;
 }
 
 @media (max-width: 56rem) {
-    .resultstop {
+    .results-top {
         flex-direction: column;
     }
 }
 
 /* --------------- MIDDLE SECTION --------------- */
 
-.resultsmiddle {
+.result-smiddle {
     flex-direction: column;
 }

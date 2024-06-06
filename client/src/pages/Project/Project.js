@@ -1,3 +1,15 @@
+/**
+ * Project page
+ * Displays a project with all its details.
+ * It consists of two sections:
+ * - the top section: the title
+ * - the project:
+ *  - the image
+ *  - the description
+ *  - the program tracks
+ *  - the course
+ */
+
 import React from 'react'
 // useParams
 import { useParams } from 'react-router-dom'

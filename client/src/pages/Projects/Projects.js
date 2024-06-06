@@ -1,3 +1,12 @@
+/**
+ * Projects page
+ * Displays all projects.
+ * It consists of three sections:
+ * - the top section: the tagline
+ * - the filter buttons
+ * - the middle section: the projects
+ */
+
 import React, { useState } from 'react'
 // html-react-parser
 import parse from 'html-react-parser'

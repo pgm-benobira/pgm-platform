@@ -1,3 +1,16 @@
+/**
+ * Blog Post page
+ * Displays a blog post with all its details.
+ * It consists of two sections:
+ * - the top section: the title
+ * - the blog post:
+ *   - the image
+ *   - the text
+ *   - the tags
+ *   - the date
+ *   - the author
+ */
+
 import React from 'react'
 // useParams
 import { useParams } from 'react-router-dom'

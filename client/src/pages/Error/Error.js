@@ -1,3 +1,11 @@
+/**
+ * Error page
+ * Used to display an error message.
+ * It consists of two sections:
+ * - the top section: the error code
+ * - the bottom section: the error message
+ */
+
 import React from 'react'
 import { useRouteError } from 'react-router-dom'
 import Header from '../../components/Elements/Header';

@@ -7,7 +7,9 @@
  * - the bottom section: the external links and the quote
  */
 
-import React from 'react'
+import React, { useContext } from 'react'
+// context
+import { ThemeContext } from '../../contexts/ThemeContext'
 // html-react-parser
 import parse from 'html-react-parser'
 // graphql
@@ -28,6 +30,7 @@ import Button from '../../components/Basics/Button/Button';
 import Quote from '../../components/Basics/Quote/Quote';
 
 export default function Home() {
+  const { darkMode } = useContext(ThemeContext);
   const slug = 'home';
 
   // --------- QUERY FOR THE PAGE DATA --------- //
@@ -67,7 +70,9 @@ export default function Home() {
         <div className="home-top__left">
           {tagline}
           <Search />
-          {programmingLanguages}
+          <div className={`programming-languages ${darkMode ? 'programming-languages--dark' : ''}`}>
+            {programmingLanguages}
+          </div>
         </div>
         <Impression fileName={impressionPgm01.fileName} url={impressionPgm01.url} />
       </section>
@@ -76,7 +81,9 @@ export default function Home() {
       <section className="flex home-middle">
         <Impression fileName={impressionPgm02.fileName} url={impressionPgm02.url} />
         <div className="flex home-middle__right">
-          {homeHighlights}
+          <div className={`home-highlights ${darkMode ? 'home-highlights--dark' : ''}`}>
+            {homeHighlights}
+          </div>
           <div className="flex foryou__container">
             <div className="foryou">
               <Bubble children={foryou} />

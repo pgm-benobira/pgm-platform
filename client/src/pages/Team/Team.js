@@ -1,3 +1,13 @@
+/**
+ * Team page
+ * Used to display the team members.
+ * It consists of four sections:
+ * - the top section: the tagline
+ * - the middle section: the team member
+ * - the row of all the pictures of the team members excluding the one that is active
+ * - the bottom section: the vacatures
+ */
+
 import React, { useState } from 'react'
 // html-react-parser
 import parse from 'html-react-parser'

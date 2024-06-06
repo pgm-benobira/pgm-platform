@@ -1,11 +1,5 @@
 /* --------------- MIDDLE SECTION --------------- */
 
-/* @media (max-width: 100rem) {
-    .services-middle {
-        flex-direction: column;
-    }
-} */
-
 .services {
     justify-content: flex-start;
     width: 55%;

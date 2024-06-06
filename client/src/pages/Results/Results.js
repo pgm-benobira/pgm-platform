@@ -7,7 +7,7 @@
 
 import React from "react";
 // useParams
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 // graphql
 import { useQuery } from '@apollo/client';
 import { GET_SEARCH_ITEMS } from '../../graphql/queries';
@@ -53,73 +53,81 @@ export default function Results() {
 
             {/* the middle section */}
             <section className="flex results-middle">
-                {data.projects.length > 0 && (
-                    <div>
-                        <h1>Projecten van onze studenten:</h1>
-                        <ul className="flex">
-                            {data.projects.map(project => (
-                                <Card
-                                    key={project.slug}
-                                    page={project.page.slug}
-                                    slug={project.slug}
-                                    title={project.title}
-                                    date={project.date}
-                                    tags={project.programTracks}
-                                    fileName={project.image.fileName}
-                                    url={project.image.url} />
-                            ))}
-                        </ul>
-                    </div>
-                )}
+                {data.projects.length > 0 || data.blogPosts.length > 0 || data.services.length > 0 || data.teamMembers.length > 0 ? (
+                    <>
+                        {data.projects.length > 0 && (
+                            <div>
+                                <h1>Projecten van onze studenten:</h1>
+                                <ul className="flex">
+                                    {data.projects.map(project => (
+                                        <Card
+                                            key={project.slug}
+                                            page={project.page.slug}
+                                            slug={project.slug}
+                                            title={project.title}
+                                            date={project.date}
+                                            tags={project.programTracks}
+                                            fileName={project.image.fileName}
+                                            url={project.image.url} />
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
 
-                {data.blogPosts.length > 0 && (
-                    <div>
-                        <h1>Blog artkelen:</h1>
-                        <ul className="flex">
-                            {data.blogPosts.map(post => (
-                                <Card
-                                    key={post.slug}
-                                    page={post.page.slug}
-                                    slug={post.slug}
-                                    title={post.title}
-                                    date={post.date}
-                                    tags={post.blogTags}
-                                    fileName={post.image.fileName}
-                                    url={post.image.url} />
-                                ))}
-                        </ul>
-                    </div>
-                )}
+                        {data.blogPosts.length > 0 && (
+                            <div>
+                                <h1>Blog artkelen:</h1>
+                                <ul className="flex">
+                                    {data.blogPosts.map(post => (
+                                        <Card
+                                            key={post.slug}
+                                            page={post.page.slug}
+                                            slug={post.slug}
+                                            title={post.title}
+                                            date={post.date}
+                                            tags={post.blogTags}
+                                            fileName={post.image.fileName}
+                                            url={post.image.url} />
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
 
-                {data.services.length > 0 && (
-                    <div>
-                        <h1>Gevonden services:</h1>
-                        <ul className="flex">
-                            {data.services.map(service => (
-                                <Card
-                                    key={service.name}
-                                    page='services'
-                                    description={service.description}
-                                    title={service.title} />
-                                ))}
-                        </ul>
-                    </div>
-                )}
+                        {data.services.length > 0 && (
+                            <div>
+                                <h1>Gevonden services:</h1>
+                                <ul className="flex">
+                                    {data.services.map(service => (
+                                        <Card
+                                            key={service.name}
+                                            page='services'
+                                            description={service.description}
+                                            title={service.title} />
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
 
-                {data.teamMembers.length > 0 && (
-                    <div>
-                        <h1>Teamleden:</h1>
-                        <ul className="flex">
-                            {data.teamMembers.map(member => (
-                                <Card
-                                    key={member.name}
-                                    page='team'
-                                    description={member.description}
-                                    title={member.name}
-                                    fileName={member.image.fileName}
-                                    url={member.image.url} />
-                                ))}
-                        </ul>
+                        {data.teamMembers.length > 0 && (
+                            <div>
+                                <h1>Teamleden:</h1>
+                                <ul className="flex">
+                                    {data.teamMembers.map(member => (
+                                        <Card
+                                            key={member.name}
+                                            page='team'
+                                            description={member.description}
+                                            title={member.name}
+                                            fileName={member.image.fileName}
+                                            url={member.image.url} />
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </>
+                ) : (
+                    <div className="no-results">
+                        <h1>Geen resultaten gevonden, treur niet je kan ons altijd <Link className="focus" to='mailto:philippe.depauw@arteveldehs.be'>contacteren</Link>!</h1>
                     </div>
                 )}
             </section>

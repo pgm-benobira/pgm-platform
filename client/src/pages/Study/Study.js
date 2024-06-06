@@ -7,7 +7,9 @@
  * - the bottom section: the quote, the external links and the redirect to the official website
  */
 
-import React from 'react'
+import React, { useContext } from 'react'
+// context
+import { ThemeContext } from '../../contexts/ThemeContext'
 // html-react-parser
 import parse from 'html-react-parser'
 // graphql
@@ -29,6 +31,7 @@ import Redirect from '../../components/Basics/Redirect';
 import Media from '../../components/Basics/Media';
 
 export default function Study() {
+  const { darkMode } = useContext(ThemeContext);
   const slug = 'study';
 
   // --------- QUERY FOR THE PAGE DATA --------- //
@@ -72,7 +75,7 @@ export default function Study() {
         <Media url={video.url} />
         <div className="flex study-middle__right">
           <Bubble children={studyIntroduction}/>
-          <div className="study-highlights">
+          <div className={`study-highlights ${darkMode ? 'study-highlights--dark' : ''}`}>
             {studyHighlights}
             <Impression fileName={impression05.fileName} url={impression05.url}/>
           </div>

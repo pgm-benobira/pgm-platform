@@ -45,7 +45,7 @@
     }
 }
 
-.dark-mode .study-highlight {
+.study-highlights--dark .study-highlight {
     background-color: var(--secondary-dark);
 }
 
