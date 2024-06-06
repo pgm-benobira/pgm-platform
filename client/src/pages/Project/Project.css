@@ -32,6 +32,12 @@
     }
 }
 
+.project__description,
+.course,
+.program-tracks {
+    height: 100%;
+}
+
 @media (max-width: 56rem) {
     .info {
         flex-direction: column;
@@ -48,7 +54,6 @@
 }
 
 .course {
-    height: 100%;
     display: flex;
     align-items: flex-end;
     position: relative;

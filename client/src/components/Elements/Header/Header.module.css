@@ -51,7 +51,7 @@
         background: url('../../../assets/images/rocket.svg') no-repeat center center;
         background-size: contain;
         position: absolute;
-        animation: rocketMove 15s linear infinite;
+        animation: rocketMove 12s linear infinite;
         z-index: 1;
     }
     .operations {

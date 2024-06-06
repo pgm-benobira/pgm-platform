@@ -1,21 +1,5 @@
 /* --------------- MIDDLE SECTION --------------- */
 
-.team-member {
-    width: 60%;
-}
-
-@media (max-width: 80rem) {
-    .team-member {
-        width: 80%;
-    }
-}
-
-@media (max-width: 60rem) {
-    .team-member {
-        width: 100%;
-    }
-}
-
 .team-member__nav {
     flex: 1;
     flex-direction: column;

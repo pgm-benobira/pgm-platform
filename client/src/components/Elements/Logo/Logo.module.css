@@ -7,7 +7,7 @@
     padding: 0 2rem;
 }
 
-.dark-mode .logo__container {
+.dark {
     background-color: var(--dark);
 }
 
@@ -39,6 +39,6 @@
     }
 }
 
-.dark-mode .logo__text {
+.dark {
     color: var(--light);
 }

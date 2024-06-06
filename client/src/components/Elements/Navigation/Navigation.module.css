@@ -18,7 +18,7 @@
     color: var(--dark);
 }
 
-.dark-mode .navigation__link {
+.dark {
     color: var(--light);
 }
 

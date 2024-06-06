@@ -1,4 +1,4 @@
-.loading-container {
+.loadingcontainer {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     z-index: 10;
 }
 
-.dark-mode .loading-container {
+.dark {
     background-color: var(--grey-dark);
 }
 
@@ -35,7 +35,7 @@
     }
 }
 
-.loading-logo {
+.loadinglogo {
     position: absolute;
     width: 2rem;
     height: 2rem;

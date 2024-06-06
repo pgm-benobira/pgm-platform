@@ -9,7 +9,7 @@
     }
 }
 
-.dark-mode .card__link {
+.dark {
     color: var(--light);
 }
 
@@ -42,14 +42,11 @@
     flex-direction: column;
 }
 
-.card__date {
-    padding-bottom: 2rem;
-}
-
 .card__tags {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    padding-top: 2rem;
 }
 
 .card__image {

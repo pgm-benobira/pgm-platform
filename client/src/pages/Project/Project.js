@@ -48,11 +48,11 @@ export default function Project() {
       <section className="flex project">
         <Impression url={data.project.image.url} fileName={data.project.image.fileName} />
         <div className='flex project__content'>
-          <Bubble>
+          <Bubble addClass='project__description'>
             <p>{parse(data.project.description)}</p>
           </Bubble>
           <div className='flex project__info'>
-            <Bubble addContainer='program-tracks__container' addClass='flex'>
+            <Bubble addContainer='program-tracks__container' addClass='flex program-tracks'>
               <h2>Programmalijnen:</h2>
               {data.project.programTracks.map(track => (
                 <Tag key={track.title}>{track.title}</Tag>

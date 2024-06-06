@@ -49,7 +49,7 @@ export default function BlogPost() {
         <div className='flex blog-post__info'>
           <div className='flex blog-post__credtis'>
             <Bubble addContainer='blog-post__date__container' addClass='blog-post__date flex flex--center'>
-              <p>Gepubliceerd op: {data.blogPost.date}</p>
+              <p>Gepubliceerd op: {new Date(data.blogPost.date).toLocaleDateString('en-GB')}</p>
             </Bubble>
             <Bubble addContainer='blog-post__author__container' addClass='blog-post__author flex flex--center '>
               <p>Geschreven door: {data.blogPost.teamMember.name}</p>
