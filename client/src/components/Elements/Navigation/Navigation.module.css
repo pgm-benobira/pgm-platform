@@ -24,7 +24,7 @@
 
 @media (max-width: 100rem) {
     .navigation__link {
-        padding: 1.5rem;
+        padding: 1rem;
         width: 100%;
     }
 }

@@ -82,6 +82,7 @@
     flex: 1;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
 }
 
 .home-highlights--dark .home-highlight {
