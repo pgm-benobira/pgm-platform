@@ -69,7 +69,6 @@ query GET_ALL_BLOG_POSTS {
       slug
     }
     blogTags {
-      id
       title
     }
     image {
@@ -104,6 +103,27 @@ query GET_BLOG_POST_BY_SLUG($slug: String = "") {
 }
 `;
 
+// To get the first two blog posts for the home page
+const GET_FIRST_TWO_BLOG_POSTS = gql`
+query GET_FIRST_TWO_BLOG_POSTS {
+  blogPosts(first: 2) {
+    title
+    date
+    slug
+    page {
+      slug
+    }
+    blogTags {
+      title
+    }
+    image {
+      fileName
+      url
+    }
+  }
+}
+`;
+
 // To get all the projects for the projects page
 const GET_ALL_PROJECTS = gql`
 query GET_ALL_PROJECTS {
@@ -114,7 +134,6 @@ query GET_ALL_PROJECTS {
       slug
     }
     programTracks {
-      id
       title
     }
     image {
@@ -146,6 +165,26 @@ query GET_PROJECT_BY_SLUG($slug: String = "") {
 }
 `;
 
+// To get the first two projects for the home page
+const GET_FIRST_TWO_PROJECTS = gql`
+query GET_FIRST_TWO_PROJECTS {
+  projects(first: 2) {
+    title
+    slug
+    page {
+      slug
+    }
+    programTracks {
+      title
+    }
+    image {
+      fileName
+      url
+    }
+  }
+}
+`;
+
 // Search content query
 const GET_SEARCH_ITEMS = gql`
   query GET_SEARCH_ITEMS($query: String = "") {
@@ -165,7 +204,6 @@ const GET_SEARCH_ITEMS = gql`
         slug
       }
       programTracks {
-        id
         title
       }
       image {
@@ -182,7 +220,6 @@ const GET_SEARCH_ITEMS = gql`
       }
       blogTags {
         title
-        id
       }
       image {
         fileName
@@ -205,4 +242,4 @@ const GET_SEARCH_ITEMS = gql`
   }
 `;
 
-export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG, GET_ALL_PROJECTS, GET_PROJECT_BY_SLUG, GET_SEARCH_ITEMS };
+export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG, GET_FIRST_TWO_BLOG_POSTS, GET_ALL_PROJECTS, GET_PROJECT_BY_SLUG, GET_FIRST_TWO_PROJECTS, GET_SEARCH_ITEMS };

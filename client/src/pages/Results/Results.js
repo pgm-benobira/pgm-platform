@@ -42,13 +42,13 @@ export default function Results() {
             {/* head data */}
             <Helmet>
                 <title>Results page</title>
-                <meta name='description' content={`Search Results for "${query}"`}/>
+                <meta name='description' content={`Zoekersultaten voor "${query}" op de GP website.`}/>
             </Helmet>
 
             {/* the top section */}
             <section className="flex results-top">
                 <Redirect link={ROUTES.home.path} orientation='left' />
-                <h1>Search Results for "<span className="focus">{query}</span>"</h1>
+                <h1>Resultaten voor "<span className="focus">{query}</span>"</h1>
             </section>
 
             {/* the middle section */}
