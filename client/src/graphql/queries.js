@@ -242,4 +242,42 @@ const GET_SEARCH_ITEMS = gql`
   }
 `;
 
-export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG, GET_FIRST_TWO_BLOG_POSTS, GET_ALL_PROJECTS, GET_PROJECT_BY_SLUG, GET_FIRST_TWO_PROJECTS, GET_SEARCH_ITEMS };
+// To get all the CAD courses for the program page
+const GET_ALL_CAD_COURSES = gql`
+query GET_ALL_CAD_COURSES {
+  courses(first: 23, where: {majors_some: {title_contains: "Cloud Application Development"}}, orderBy: sortOrder_ASC) {
+    title
+    studypoints
+    programTrack {
+      abbreviation
+    }
+    semester {
+      title
+    }
+    year {
+      title
+    }
+  }
+}
+`;
+
+// To get all the IFD courses for the program page
+const GET_ALL_IFD_COURSES = gql`
+query GET_ALL_IFD_COURSES {
+  courses(first: 23, where: {majors_some: {title_contains: "Interactive Front-end Development"}}, orderBy: sortOrder_ASC) {
+    title
+    studypoints
+    programTrack {
+      abbreviation
+    }
+    semester {
+      title
+    }
+    year {
+      title
+    }
+  }
+}
+`;
+
+export { GET_PAGE_DATA, GET_ALL_SERVICES, GET_ALL_TEAM_MEMBERS, GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG, GET_FIRST_TWO_BLOG_POSTS, GET_ALL_PROJECTS, GET_PROJECT_BY_SLUG, GET_FIRST_TWO_PROJECTS, GET_SEARCH_ITEMS, GET_ALL_CAD_COURSES, GET_ALL_IFD_COURSES };

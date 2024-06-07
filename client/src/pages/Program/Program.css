@@ -1,0 +1,122 @@
+.cad {
+    color: var(--cad);
+}
+
+.ifd {
+    color: var(--ifd);
+}
+
+.courses__container {
+    flex: 1;
+}
+
+@media (max-width: 80rem) {
+    .courses__container {
+        flex-direction: column;
+    
+    }
+}
+
+.courses {
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+    height: 100%;
+}
+
+.courses__major {
+    width: 100%;
+}
+
+.year {
+    outline: 2px solid var(--primary);
+    border-radius: 2rem;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+}
+
+.track::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    margin-right: 1rem;
+}
+
+@media (max-width: 32rem) {
+    .track::before {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+}
+
+/* Business & Communication */
+.track--cgr::before {
+    background-color: var(--cgr);
+}
+
+.track--cgr:hover::after {
+    content: "Business & Communication";
+    margin-left: 1rem;
+    color: var(--cgr);
+}
+
+/* Applied Information Technology */
+.track--ddw::before {
+    background-color: var(--ddw);
+}
+
+.track--ddw:hover::after {
+    content: "Applied Information Technology";
+    margin-left: 1rem;
+    color: var(--ddw);
+}
+
+/* Creative Design & Development */
+.track--opr::before {
+    background-color: var(--opr);
+}
+
+.track--opr:hover::after {
+    content: "Creative Design & Development";
+    margin-left: 1rem;
+    color: var(--opr);
+}
+
+/* Computer Programming */
+.track--tdp::before {
+    background-color: var(--tdp);
+}
+
+.track--tdp:hover::after {
+    content: "Computer Programming";
+    margin-left: 1rem;
+    color: var(--tdp);
+}
+
+/* Workplace Learning */
+.track--idc::before {
+    background-color: var(--idc);
+}
+
+.track--idc:hover::after {
+    content: "Workplace Learning";
+    margin-left: 1rem;
+    color: var(--idc);
+}
+
+@media (max-width: 52rem) {
+    .track--cgr:hover::after,
+    .track--ddw:hover::after,
+    .track--opr:hover::after,
+    .track--tdp:hover::after,
+    .track--idc:hover::after {
+        display: none;
+    }
+}

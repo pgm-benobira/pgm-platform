@@ -92,6 +92,13 @@ h2 {
     }
 }
 
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2.25rem;
+    padding-bottom: 0.8rem;
+}
+
 /* Highlighted text and links in orange */
 .focus,
 a.active {
