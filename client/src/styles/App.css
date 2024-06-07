@@ -41,6 +41,11 @@ GLOBAL STYLES
     color: var(--light);
 }
 
+.App {
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;

@@ -22,7 +22,9 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
   );
 }
 

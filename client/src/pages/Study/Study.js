@@ -91,8 +91,8 @@ export default function Study() {
           <Redirect title='Benieuwd naar meer?' link='https://www.arteveldehogeschool.be/nl/opleidingen/graduaat/programmeren' target='_blank' />
         </div>
         <div className="flex study-bottom__right">
-          <Bubble children={foryou} />
-          <Bubble children={externalLinks} type='secondary'  />
+          <Bubble addClass='foryou__background' children={foryou} />
+          <Bubble addClass='externalLink__background' children={externalLinks} type='secondary'  />
         </div>
       </section>
     </div>
